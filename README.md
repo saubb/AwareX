@@ -1,47 +1,50 @@
-# Drowsiness-Detection-Mediapipe
+# AwareX – Intelligent Driver Monitoring & Safety Analytics System
 
-The code uses [MediaPipe](https://google.github.io/mediapipe/) model for detecting a face in the video stream.
+AwareX is a real-time AI-powered driver monitoring system designed to enhance road safety using Computer Vision and Deep Learning. The system analyzes live webcam/video input to detect driver fatigue, distraction, emotional state, age, and gender in real time.
 
-Features based on facial landmark positions are calculated and are used by a LSTM model to predict whether the use is alert or drowsy. 
+## Features
 
-As a first step, calibration is performed, which calculates the facial features over a small number of frames. The user is reminded to be in neutral position in this process. 
+- Real-time Drowsiness Detection
+- Emotion Recognition
+- Age Detection
+- Gender Classification
+- Face Landmark Detection using MediaPipe
+- Driver Attention Monitoring
+- Fatigue Risk Analysis
+- Real-time Webcam Inference
+- Alert System for Unsafe Driving Conditions
 
-Calibration returns the mean and standard deviation values to normalize the facial features at inference step. 
+## Tech Stack
 
-<img src="assets/calibration.jpg" width="720" alt-image="calibration"/>
+- Python
+- OpenCV
+- MediaPipe
+- PyTorch
+- NumPy
+- Deep Learning
+- Computer Vision
 
-###### Fig 1: Calibration
+## Project Objective
 
-During inference, first the features are calculated and are normalized. These features are sent over to the LSTM model to make a prediction. The LSTM model computes its prediction over five continuous frames and returns the predicted state. 
+The goal of AwareX is to reduce road accidents caused by:
+- Driver fatigue
+- Distracted driving
+- Underage driving
+- Emotional instability while driving
 
-<img src="assets/alert.jpg" width="720" alt-image="alert-prediction"/>
+The system continuously monitors driver behavior and provides intelligent safety insights through real-time facial analytics.
 
-###### Fig 2: Alert State 
+## Project Architecture
 
-<img src="assets/drowsy.jpg" width="720" alt-image="drowsy-prediction"/>
+1. Face Detection
+2. Facial Landmark Extraction
+3. Eye & Mouth Aspect Ratio Calculation
+4. Drowsiness/Fatigue Detection
+5. Emotion Classification
+6. Age & Gender Prediction
+7. Driver Risk Assessment
 
-###### Fig 3: Drowsy State 
-
-<img src="assets/py_test.gif" width="720" alt-image="Demo"/>
-
-###### Fig 4: Demo inference
-
-## Projects
-
-[Sleepless Academy](https://github.com/Samradh007/sleeplessAcademy)
-
-We apply the idea of drowsiness detection to a virtual classroom / online MOOC platform setting. The WebApp shows a demo where the student is alerted when drowsy. The statistics obtained over the course can then help course content creators to improve their offerings. 
-
-<img src="https://github.com/Samradh007/sleeplessAcademy/blob/main/assets/LSTM.gif" width="720" alt="LSTM Model"> 
-
-###### Fig 5: Web Application Demo 
-
-
-## Authors
-
-* [Samradh Agarwal](https://github.com/Samradh007)
-* [Abhishek Tandon](https://github.com/Tandon-A)
-
-
-
-
+## Contributors
+Ishwari Bais
+Janhvi Hingankar
+Saubiya Ahmad
